@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         maintitle.isHidden = true
 
         
+        
     }
     
     func displayScore() {
@@ -84,13 +85,29 @@ class ViewController: UIViewController {
         
         questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct! Would you like ot play again?"
         
+        
+        switch correctQuestions {
+        case 0:
+            questionField.text = "THATS TERRIBLE"
+        case 1:
+            questionField.text = " At least you got one question correct"
+        case 2:
+            questionField.text = " Hey 50cent is half of a dollar."
+        case 3:
+            questionField.text = " You are have 75% correct"
+        case 4:
+            questionField.text = " AYYY YOU FYE! You got all of them correct"
+        default : break
+            
+        }
+    
     }
     
     @IBAction func checkAnswer(_ sender: UIButton) {
         // Increment the questions asked counter
         questionsAsked += 1
         
-        let correctAnswer = questionsForUser[questionIndex].questions
+        let correctAnswer = questionsForUser[questionIndex].correctAnswer
         
         if (sender === Button1 &&  correctAnswer == 0) || (sender === Button2 &&  correctAnswer == 1) || (sender === Button3 &&  correctAnswer == 2) || (sender === Button4 &&  correctAnswer == 3) {
             correctQuestions += 1
@@ -114,8 +131,11 @@ class ViewController: UIViewController {
     
     @IBAction func playAgain() {
         // Show the answer buttons
-        trueButton.isHidden = false
-        falseButton.isHidden = false
+        Button1.isHidden = false
+        Button2.isHidden = false
+        Button3.isHidden = false
+        Button4.isHidden = false
+
         
         questionsAsked = 0
         correctQuestions = 0
