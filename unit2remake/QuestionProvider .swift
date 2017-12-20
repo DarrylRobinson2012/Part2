@@ -18,7 +18,7 @@ struct TriviaQuestions {
 }
 
 
-struct QuestionData {
+
     // Using the TriviaQuestions struct the array questionsForUser is created.
     let questionsForUser: [TriviaQuestions] = [ TriviaQuestions(questions: "Which car is the fastest",
                                                                answers: ["Charger","Mustang", "E350", "M4"],
@@ -39,4 +39,28 @@ struct QuestionData {
                                                                 answers: ["corolla","jeep", "taruas", "Lexus"],
                                                                 correctAnswer: 1)]
     
+
+    var roundQuestions = [Int]()
+    var usedQuestions = [Int]()
+    var questionIndex = 0
+
+
+
+
+    func generateQuestion() {
+        var i = 0
+    while i < questionsForUser.count  {
+        roundQuestions.append(i)
+        i += 1
+        usedQuestions.append(i)
+        }
+        
+    
+    
 }
+//DO NOT UNDERSTAND
+func nextQuestion() {
+    questionIndex = roundQuestions.remove(at: GKRandomSource.sharedRandom().nextInt(upperBound: roundQuestions.count))
+    usedQuestions.append(questionIndex)
+}
+

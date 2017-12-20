@@ -16,20 +16,16 @@ class ViewController: UIViewController {
     var questionsAsked = 0
     var correctQuestions = 0
     var indexOfSelectedQuestion: Int = 0
-    
     var gameSound: SystemSoundID = 0
     
-    let trivia: [[String : String]] = [
-        ["Question": "Only female koalas can whistle", "Answer": "False"],
-        ["Question": "Blue whales are technically whales", "Answer": "True"],
-        ["Question": "Camels are cannibalistic", "Answer": "False"],
-        ["Question": "All ducks are birds", "Answer": "True"]
-    ]
-    
+    @IBOutlet weak var maintitle: UILabel!
     @IBOutlet weak var questionField: UILabel!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
-    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var Button1: UIButton!
+    @IBOutlet weak var Button2: UIButton!
+    @IBOutlet weak var Button3: UIButton!
+    @IBOutlet weak var Button4: UIButton!
+    @IBOutlet weak var  score: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -37,7 +33,7 @@ class ViewController: UIViewController {
         //loadGameStartSound()
         // Start game
         playGameStartSound()
-        displayQuestion()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,22 +41,48 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func primetheApp() {
+        Button1.isHidden = true
+        Button2.isHidden = true
+        Button3.isHidden = true
+        Button4.isHidden = true
+        maintitle.isHidden = false
+        questionField.isHidden = true
+        playButton.isHidden = false
+        score.isHidden = true
+    
+    }
+    
     func displayQuestion() {
-        indexOfSelectedQuestion = GKRandomSource.sharedRandom().nextInt(upperBound: trivia.count)
-        let questionDictionary = trivia[indexOfSelectedQuestion]
-        //questionField.text = questionDictionary["Question"]
-        playAgainButton.isHidden = true
+        nextQuestion()
+        questionField.text = questionsForUser[questionIndex].questions
+        Button1.setTitle(questionsForUser[questionIndex].answers[0], for: UIControlState.normal)
+        Button2.setTitle(questionsForUser[questionIndex].answers[1], for: UIControlState.normal)
+        Button3.setTitle(questionsForUser[questionIndex].answers[2], for: UIControlState.normal)
+        Button4.setTitle(questionsForUser[questionIndex].answers[3], for: UIControlState.normal)
+        playButton.isHidden = true
+        score.isHidden = true
+        maintitle.isHidden = true
+
+        
     }
     
     func displayScore() {
         // Hide the answer buttons
-        trueButton.isHidden = true
-        falseButton.isHidden = true
+        Button1.isHidden = true
+        Button2.isHidden = true
+        Button3.isHidden = true
+        Button4.isHidden = true
+        
+        score.isHidden = false 
         
         // Display play again button
-        playAgainButton.isHidden = false
+        playButton.isHidden = false
         
-        questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct!"
+        maintitle.isHidden = true
+        
+        questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct! Would you like ot play again?"
         
     }
     
@@ -68,10 +90,9 @@ class ViewController: UIViewController {
         // Increment the questions asked counter
         questionsAsked += 1
         
-        let selectedQuestionDict = trivia[indexOfSelectedQuestion]
-        let correctAnswer = selectedQuestionDict["Answer"]
+        let correctAnswer = questionsForUser[questionIndex].questions
         
-        if (sender === trueButton &&  correctAnswer == "True") || (sender === falseButton && correctAnswer == "False") {
+        if (sender === Button1 &&  correctAnswer == 0) || (sender === Button2 &&  correctAnswer == 1) || (sender === Button3 &&  correctAnswer == 2) || (sender === Button4 &&  correctAnswer == 3) {
             correctQuestions += 1
             questionField.text = "Correct!"
         } else {

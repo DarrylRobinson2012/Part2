@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,7 +23,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="unit2remake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lets play Trivia!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa1-lA-s6S">
@@ -33,16 +33,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssO-6R-nlK">
-                                <rect key="frame" x="78" y="198" width="166" height="108"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="nvK-Lu-Rq7"/>
-                                </constraints>
+                                <rect key="frame" x="78" y="222" width="221" height="294"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z10-nR-3bZ">
-                                <rect key="frame" x="99" y="141.5" width="123" height="37"/>
+                                <rect key="frame" x="99" y="166" width="178" height="37"/>
                                 <color key="backgroundColor" red="0.99814195509221437" green="1" blue="0.15061202866870937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="21"/>
                                 <state key="normal" title="Button 1">
@@ -50,7 +47,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6X-kx-yFI">
-                                <rect key="frame" x="99" y="186.5" width="123" height="37"/>
+                                <rect key="frame" x="99" y="211" width="178" height="37"/>
                                 <color key="backgroundColor" red="0.99814195509221437" green="1" blue="0.15061202866870937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="21"/>
                                 <state key="normal" title="Button 2">
@@ -58,7 +55,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJG-IB-sw0">
-                                <rect key="frame" x="99" y="231.5" width="123" height="37"/>
+                                <rect key="frame" x="99" y="256" width="178" height="37"/>
                                 <color key="backgroundColor" red="0.99814195509221437" green="1" blue="0.15061202866870937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="21"/>
                                 <state key="normal" title="Button 3">
@@ -66,7 +63,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnM-Zp-keY">
-                                <rect key="frame" x="63" y="479" width="196" height="49"/>
+                                <rect key="frame" x="63" y="689" width="251" height="49"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="plu-Zh-H3B"/>
@@ -77,13 +74,13 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkN-NR-xsb">
-                                <rect key="frame" x="38" y="33" width="244" height="21"/>
+                                <rect key="frame" x="38" y="57" width="299" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCI-ro-Ynf">
-                                <rect key="frame" x="100" y="276.5" width="122" height="37"/>
+                                <rect key="frame" x="100" y="301" width="177" height="37"/>
                                 <color key="backgroundColor" red="0.99814195509221437" green="1" blue="0.15061202866870937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="21"/>
                                 <state key="normal" title="Button 4">
@@ -94,7 +91,6 @@
                         <color key="backgroundColor" red="0.34194878029999998" green="1" blue="0.26229744799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CCI-ro-Ynf" secondAttribute="trailing" constant="98" id="2lZ-SY-7Xj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ssO-6R-nlK" secondAttribute="trailing" constant="76" id="41r-nZ-RmF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lnM-Zp-keY" secondAttribute="trailing" constant="61" id="48I-Y0-M4z"/>
                             <constraint firstItem="Aa1-lA-s6S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="4aU-lC-5Oc"/>
                             <constraint firstItem="zkN-NR-xsb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="6qd-Ek-Cvu"/>
@@ -104,13 +100,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aa1-lA-s6S" secondAttribute="trailing" constant="36" id="FAC-AW-imX"/>
                             <constraint firstItem="F6X-kx-yFI" firstAttribute="top" secondItem="z10-nR-3bZ" secondAttribute="bottom" constant="8" id="GWO-N0-SPt"/>
                             <constraint firstItem="Aa1-lA-s6S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="JCF-h8-baj"/>
-                            <constraint firstItem="ssO-6R-nlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="KKK-AH-r7f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJG-IB-sw0" secondAttribute="trailing" constant="98" id="NCC-fO-dQ1"/>
+                            <constraint firstItem="ssO-6R-nlK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="V6s-qs-PX6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z10-nR-3bZ" secondAttribute="trailing" constant="98" id="VgB-yL-lpg"/>
                             <constraint firstItem="lnM-Zp-keY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="W2v-Z8-gGh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lnM-Zp-keY" secondAttribute="bottom" constant="40" id="Ytl-5M-Hvh"/>
                             <constraint firstItem="CCI-ro-Ynf" firstAttribute="top" secondItem="AJG-IB-sw0" secondAttribute="bottom" constant="8" id="ZNy-Y5-z8t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F6X-kx-yFI" secondAttribute="trailing" constant="98" id="aYh-48-Q5A"/>
+                            <constraint firstItem="ssO-6R-nlK" firstAttribute="centerX" secondItem="AJG-IB-sw0" secondAttribute="centerX" id="c9F-pm-rkq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zkN-NR-xsb" secondAttribute="trailing" constant="38" id="h6T-ir-AoW"/>
                             <constraint firstItem="lnM-Zp-keY" firstAttribute="top" secondItem="ssO-6R-nlK" secondAttribute="bottom" constant="173" id="hu5-WU-5qw"/>
                             <constraint firstItem="CCI-ro-Ynf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="i3g-3p-DpE"/>
@@ -121,6 +118,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Button1" destination="z10-nR-3bZ" id="Rbg-d6-oow"/>
+                        <outlet property="Button2" destination="F6X-kx-yFI" id="vrP-st-iWT"/>
+                        <outlet property="Button3" destination="AJG-IB-sw0" id="Sau-4e-gnm"/>
+                        <outlet property="Button4" destination="CCI-ro-Ynf" id="AJ9-fe-mHo"/>
+                        <outlet property="maintitle" destination="Aa1-lA-s6S" id="gcY-dC-gYz"/>
+                        <outlet property="playButton" destination="lnM-Zp-keY" id="pbp-iR-NRR"/>
+                        <outlet property="questionField" destination="zkN-NR-xsb" id="oUP-wQ-vCI"/>
+                        <outlet property="score" destination="ssO-6R-nlK" id="9yx-3q-2Dp"/>
+                        <outlet property="title" destination="Aa1-lA-s6S" id="o9c-rW-oXI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
