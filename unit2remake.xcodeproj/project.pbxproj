@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46E565D81FE9D25800FC6C03 /* QuestionProvider .swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E565D71FE9D25800FC6C03 /* QuestionProvider .swift */; };
 		46F223BD1FE9966000EF83AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F223BC1FE9966000EF83AB /* AppDelegate.swift */; };
 		46F223BF1FE9966000EF83AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F223BE1FE9966000EF83AB /* ViewController.swift */; };
 		46F223C21FE9966000EF83AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F223C01FE9966000EF83AB /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46E565D71FE9D25800FC6C03 /* QuestionProvider .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionProvider .swift"; sourceTree = "<group>"; };
 		46F223B91FE9966000EF83AB /* unit2remake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unit2remake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F223BC1FE9966000EF83AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46F223BE1FE9966000EF83AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				46F223BC1FE9966000EF83AB /* AppDelegate.swift */,
 				46F223BE1FE9966000EF83AB /* ViewController.swift */,
+				46E565D71FE9D25800FC6C03 /* QuestionProvider .swift */,
 				46F223C01FE9966000EF83AB /* Main.storyboard */,
 				46F223C31FE9966000EF83AB /* Assets.xcassets */,
 				46F223C51FE9966000EF83AB /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F223BF1FE9966000EF83AB /* ViewController.swift in Sources */,
+				46E565D81FE9D25800FC6C03 /* QuestionProvider .swift in Sources */,
 				46F223BD1FE9966000EF83AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
