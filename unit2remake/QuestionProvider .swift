@@ -20,28 +20,30 @@ struct TriviaQuestions {
 
 
     // Using the TriviaQuestions struct the array questionsForUser is created.
-    let questionsForUser: [TriviaQuestions] = [ TriviaQuestions(questions: "Which car is the fastest",
-                                                               answers: ["Charger","Mustang", "E350", "M4"],
+    let questions: [TriviaQuestions] = [        TriviaQuestions(questions: "Which car is the fastest",
+                                                                answers: ["Charger","Mustang", "E350", "Rav4"],
                                                                correctAnswer: 0),
                                                 TriviaQuestions(questions: "Which car was made in Europe",
-                                                                answers: ["pinto","Challenger", "Mercedes", " Toyota"],
+                                                                answers: ["pinto","Challenger", "Mercedes", "Ford"],
                                                                 correctAnswer: 2),
                                                 TriviaQuestions(questions: "Which car is the most expensive",
-                                                                    answers: ["Explorer","Blazer", "Raptor", "G-Wagon"],
-                                                                    correctAnswer: 3),
+                                                                answers: ["Explorer","Blazer", "Raptor", "G-Wagon"],
+                                                                correctAnswer: 3),
                                                 TriviaQuestions(questions: "Which car has doors that open upward",
-                                                                    answers: ["Impala","Eclipse", "corvette", "Lambo"],
-                                                                    correctAnswer: 3),
+                                                                answers: ["Impala","Eclipse", "corvette", ],
+                                                                correctAnswer: 2),
                                                 TriviaQuestions(questions: "Which Car has American muscle",
                                                                 answers: ["Challenger","Mustang", "Cammaro", "All of the above"],
                                                                 correctAnswer: 3),
                                                 TriviaQuestions(questions: "Which car is mad for off road obstacles",
-                                                                answers: ["corolla","jeep", "taruas", "Lexus"],
-                                                                correctAnswer: 1)]
+                                                                answers: ["corolla","jeep", "taruas"],
+                                                                correctAnswer: 1),
+                                                TriviaQuestions(questions: "Which car is made for pussies ",
+                                                                answers: ["corolla","jeep", "prius" ],
+                                                                correctAnswer: 2)]
     
 
     var roundQuestions = [Int]()
-    var usedQuestions = [Int]()
     var questionIndex = 0
 
 
@@ -49,10 +51,10 @@ struct TriviaQuestions {
 
     func generateQuestion() {
         var i = 0
-    while i < questionsForUser.count  {
+    while i < questions.count  {
         roundQuestions.append(i)
         i += 1
-        usedQuestions.append(i)
+        
         }
         
     
@@ -61,6 +63,7 @@ struct TriviaQuestions {
 //DO NOT UNDERSTAND
 func nextQuestion() {
     questionIndex = roundQuestions.remove(at: GKRandomSource.sharedRandom().nextInt(upperBound: roundQuestions.count))
-    usedQuestions.append(questionIndex)
+    
+ 
 }
 

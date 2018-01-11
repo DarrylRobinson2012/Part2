@@ -45,6 +45,9 @@
                                 <state key="normal" title="Button 1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nql-47-TuZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6X-kx-yFI">
                                 <rect key="frame" x="99" y="211" width="178" height="37"/>
@@ -53,6 +56,9 @@
                                 <state key="normal" title="Button 2">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LqH-WE-FDd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJG-IB-sw0">
                                 <rect key="frame" x="99" y="256" width="178" height="37"/>
@@ -61,6 +67,9 @@
                                 <state key="normal" title="Button 3">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Cc-Au-bT4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnM-Zp-keY">
                                 <rect key="frame" x="63" y="689" width="251" height="49"/>
@@ -72,6 +81,9 @@
                                 <state key="normal" title="PLAY NOW">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="jkF-Bf-ISP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkN-NR-xsb">
                                 <rect key="frame" x="38" y="57" width="299" height="21"/>
@@ -86,6 +98,9 @@
                                 <state key="normal" title="Button 4">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H27-Qw-hgW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.34194878029999998" green="1" blue="0.26229744799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -127,7 +142,6 @@
                         <outlet property="playButton" destination="lnM-Zp-keY" id="pbp-iR-NRR"/>
                         <outlet property="questionField" destination="zkN-NR-xsb" id="oUP-wQ-vCI"/>
                         <outlet property="score" destination="ssO-6R-nlK" id="9yx-3q-2Dp"/>
-                        <outlet property="title" destination="Aa1-lA-s6S" id="o9c-rW-oXI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

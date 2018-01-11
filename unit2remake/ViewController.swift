@@ -12,11 +12,13 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     
+   var randomIndex = [Int]()
     let questionsPerRound = 4
     var questionsAsked = 0
     var correctQuestions = 0
     var indexOfSelectedQuestion: Int = 0
     var gameSound: SystemSoundID = 0
+
     
     @IBOutlet weak var maintitle: UILabel!
     @IBOutlet weak var questionField: UILabel!
@@ -32,7 +34,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //loadGameStartSound()
         // Start game
-        playGameStartSound()
+       // playGameStartSound()
+        primetheApp()
 
     }
     
@@ -51,16 +54,28 @@ class ViewController: UIViewController {
         questionField.isHidden = true
         playButton.isHidden = false
         score.isHidden = true
-    
+        generateQuestion()
+        
     }
     
     func displayQuestion() {
         nextQuestion()
-        questionField.text = questionsForUser[questionIndex].questions
-        Button1.setTitle(questionsForUser[questionIndex].answers[0], for: UIControlState.normal)
-        Button2.setTitle(questionsForUser[questionIndex].answers[1], for: UIControlState.normal)
-        Button3.setTitle(questionsForUser[questionIndex].answers[2], for: UIControlState.normal)
-        Button4.setTitle(questionsForUser[questionIndex].answers[3], for: UIControlState.normal)
+        func countQuestions() {
+            if questions[questionIndex].answers.count == 3 {
+                Button1.isHidden = false ; Button2.isHidden = false; Button3.isHidden = false; Button4.isHidden = true
+            }else {
+                Button1.isHidden = false ; Button2.isHidden = false; Button3.isHidden = false; Button4.isHidden = false
+                Button4.setTitle(questions[questionIndex].answers[3], for: UIControlState.normal)
+            }
+            
+        }
+        countQuestions()
+        questionField.text = questions[questionIndex].questions
+        questionField.isHidden = false
+        Button1.setTitle(questions[questionIndex].answers[0], for: UIControlState.normal)
+        Button2.setTitle(questions[questionIndex].answers[1], for: UIControlState.normal)
+        Button3.setTitle(questions[questionIndex].answers[2], for: UIControlState.normal)
+        //Button4.setTitle(questions[questionIndex].answers[3], for: UIControlState.normal)
         playButton.isHidden = true
         score.isHidden = true
         maintitle.isHidden = true
@@ -69,6 +84,10 @@ class ViewController: UIViewController {
         
     }
     
+
+    
+    
+    
     func displayScore() {
         // Hide the answer buttons
         Button1.isHidden = true
@@ -76,7 +95,9 @@ class ViewController: UIViewController {
         Button3.isHidden = true
         Button4.isHidden = true
         
-        score.isHidden = false 
+        score.isHidden = false
+        
+        score.text = String(correctQuestions)
         
         // Display play again button
         playButton.isHidden = false
@@ -107,14 +128,24 @@ class ViewController: UIViewController {
         // Increment the questions asked counter
         questionsAsked += 1
         
-        let correctAnswer = questionsForUser[questionIndex].correctAnswer
+        let correctAnswer = questions[questionIndex].correctAnswer
         
-        if (sender === Button1 &&  correctAnswer == 0) || (sender === Button2 &&  correctAnswer == 1) || (sender === Button3 &&  correctAnswer == 2) || (sender === Button4 &&  correctAnswer == 3) {
+        if (sender === Button1 &&  correctAnswer == 0 ) || (sender === Button2 &&  correctAnswer == 1) || (sender === Button3 &&  correctAnswer == 2) || (sender === Button4 &&  correctAnswer == 3) {
             correctQuestions += 1
             questionField.text = "Correct!"
         } else {
             questionField.text = "Sorry, wrong answer!"
         }
+        func DisplayCorrectAnswer() {
+        switch correctAnswer {
+        case 0: Button1.isHidden = false ; Button2.isHidden = true; Button3.isHidden = true; Button4.isHidden = true
+        case 1: Button1.isHidden = true ; Button2.isHidden = false; Button3.isHidden = true; Button4.isHidden = true
+        case 2: Button1.isHidden = true ; Button2.isHidden = true; Button3.isHidden = false; Button4.isHidden = true
+        case 3: Button1.isHidden = true ; Button2.isHidden = true; Button3.isHidden = true; Button4.isHidden = false
+        default: Button1.isHidden = false ; Button2.isHidden = false; Button3.isHidden = false; Button4.isHidden = false
+        }
+        }
+        DisplayCorrectAnswer()
         
         loadNextRoundWithDelay(seconds: 2)
     }
@@ -126,6 +157,7 @@ class ViewController: UIViewController {
         } else {
             // Continue game
             displayQuestion()
+            
         }
     }
     
