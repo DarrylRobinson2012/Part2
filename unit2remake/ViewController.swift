@@ -79,14 +79,7 @@ class ViewController: UIViewController {
         playButton.isHidden = true
         score.isHidden = true
         maintitle.isHidden = true
-
-        
-        
-    }
-    
-
-    
-    
+}
     
     func displayScore() {
         // Hide the answer buttons
@@ -94,18 +87,12 @@ class ViewController: UIViewController {
         Button2.isHidden = true
         Button3.isHidden = true
         Button4.isHidden = true
-        
         score.isHidden = false
-        
         score.text = String(correctQuestions)
-        
-        // Display play again button
+    // Display play again button
         playButton.isHidden = false
-        
         maintitle.isHidden = true
-        
         questionField.text = "Way to go!\nYou got \(correctQuestions) out of \(questionsPerRound) correct! Would you like ot play again?"
-        
         
         switch correctQuestions {
         case 0:
@@ -121,7 +108,6 @@ class ViewController: UIViewController {
         default : break
             
         }
-    
     }
     
     @IBAction func checkAnswer(_ sender: UIButton) {
@@ -146,7 +132,6 @@ class ViewController: UIViewController {
         }
         }
         DisplayCorrectAnswer()
-        
         loadNextRoundWithDelay(seconds: 2)
     }
     
@@ -167,14 +152,10 @@ class ViewController: UIViewController {
         Button2.isHidden = false
         Button3.isHidden = false
         Button4.isHidden = false
-
-        
         questionsAsked = 0
         correctQuestions = 0
         nextRound()
     }
-    
-    
     
     // MARK: Helper Methods
     
