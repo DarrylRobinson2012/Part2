@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		46E565D71FE9D25800FC6C03 /* QuestionProvider .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionProvider .swift"; sourceTree = "<group>"; };
-		46F223B91FE9966000EF83AB /* unit2remake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unit2remake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F223B91FE9966000EF83AB /* SportsTriviaPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsTriviaPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F223BC1FE9966000EF83AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46F223BE1FE9966000EF83AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46F223C11FE9966000EF83AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		46F223BA1FE9966000EF83AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				46F223B91FE9966000EF83AB /* unit2remake.app */,
+				46F223B91FE9966000EF83AB /* SportsTriviaPart2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		46F223B81FE9966000EF83AB /* unit2remake */ = {
+		46F223B81FE9966000EF83AB /* SportsTriviaPart2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46F223CB1FE9966000EF83AB /* Build configuration list for PBXNativeTarget "unit2remake" */;
+			buildConfigurationList = 46F223CB1FE9966000EF83AB /* Build configuration list for PBXNativeTarget "SportsTriviaPart2" */;
 			buildPhases = (
 				46F223B51FE9966000EF83AB /* Sources */,
 				46F223B61FE9966000EF83AB /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = unit2remake;
+			name = SportsTriviaPart2;
 			productName = unit2remake;
-			productReference = 46F223B91FE9966000EF83AB /* unit2remake.app */;
+			productReference = 46F223B91FE9966000EF83AB /* SportsTriviaPart2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 46F223B41FE9966000EF83AB /* Build configuration list for PBXProject "unit2remake" */;
+			buildConfigurationList = 46F223B41FE9966000EF83AB /* Build configuration list for PBXProject "SportsTriviaPart2" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				46F223B81FE9966000EF83AB /* unit2remake */,
+				46F223B81FE9966000EF83AB /* SportsTriviaPart2 */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46F223B41FE9966000EF83AB /* Build configuration list for PBXProject "unit2remake" */ = {
+		46F223B41FE9966000EF83AB /* Build configuration list for PBXProject "SportsTriviaPart2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46F223C91FE9966000EF83AB /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46F223CB1FE9966000EF83AB /* Build configuration list for PBXNativeTarget "unit2remake" */ = {
+		46F223CB1FE9966000EF83AB /* Build configuration list for PBXNativeTarget "SportsTriviaPart2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46F223CC1FE9966000EF83AB /* Debug */,
